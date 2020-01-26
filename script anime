@@ -1,0 +1,112 @@
+ //https://jikan.docs.apiary.io/#reference/0/season-archive/season-archive-request-example+schema?console=1
+ 
+ //get the search bar to be in the center and make work, line 88 always causes errors
+ 
+ $.ajax({
+  url: "https://api.jikan.moe/v3/season/2019/summer",
+  //url: "https://api.jikan.moe/v3/season/2019/winter",
+  type: "GET",
+  dataType: "json",
+  success: function(result){
+    console.log(result);
+    $("#bord").append(createTags(parseData(result,0 )))
+    $("#bord").append(createTags(parseData(result,1 )))
+    $("#bord").append(createTags(parseData(result,2 )))
+    //$("#bord").append(createTags(parseData(result,3)))
+    // search(result)
+    // console.log(result.anime[0].title)
+    }
+ })
+ 
+function parseData(data,anime){
+  var genre = data.anime[anime].genres
+  var arr = []
+  for(var i = 0; i < genre.length; i++){
+    arr.push(genre[i].name)
+  }
+  
+  var obj = {
+    title: data.anime[anime].title,
+    episode: data.anime[anime].episodes,
+    synopsis: data.anime[anime].synopsis,
+    score: data.anime[anime].score,
+    image_url: data.anime[anime].image_url,
+    genre: arr
+  }
+    return obj
+  
+}
+
+function createTags(anime){
+  console.log(anime)
+  
+  // Title â†“
+  var div = document.createElement("DIV");
+  div.className = "anime";
+  var h3 = document.createElement("h3");
+  h3.innerHTML = anime.title
+  
+  var div2 = document.createElement("DIV");
+  
+  // Image â†“
+  var imgURL = anime.image_url
+  var img = document.createElement("IMG")
+  img.setAttribute("src", imgURL);
+  img.setAttribute("width", "100");
+  img.setAttribute("height", "150");
+  
+  // Synopsis â†“
+  var p = document.createElement("P");
+  p.innerHTML = anime.synopsis
+  p.className = "des";
+  
+  // Genre â†“
+  var genre = document.createElement("P");
+  genre.innerHTML = anime.genre
+  
+  div.append(h3)
+  div2.append(img)
+  div2.append(p)
+  div.append(div2)
+  div.append(genre)
+  
+  return div
+  
+}
+
+function get(input){
+  var input0 = document.getElementById(input).value
+  return input0
+}
+
+function search(anim){
+  var getTitle = []
+  $("#submit").click(()=>{
+    // console.log(Object.values(anime.anime))
+    // anime.anime.map(val => console.log(val.title))
+  for(var i = 0; i < 266; i++){
+    console.log(anim.anime[i].title)
+   
+   }
+  })
+}
+
+//console.log(val.title)
+
+// function num(anime){
+//   for(var i = 0; i < anime.length; i++){
+//     console.log(anime[i].title)
+//   }
+// }
+
+function random(){
+  var ran = Math.floor(Math.random() * 200);
+  return ran
+}
+
+// Anime
+$('#searching').hide().delay(1000).fadeIn(2500);
+$('#bord').hide().delay(1000).fadeIn(2500);
+$('#foot').hide().delay(1000).fadeIn(2500);
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="script.js" defer></script>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <header>
+        <nav>
+          <a href ="home.html">Home</a>
+          <a href = "index.html">Anime</a>
+          <hr>
+        </nav>
+      </header>
+      <main>
+        <!--<div id = "searching" class = "flex">-->
+          <!--<label>Search <input type = "text" id="search"></label>-->
+          <!--<button onclick= search() id="submit">Submit</button>-->
+        </div>
+        <div id = "bord" class = "flex-container">
+        </div>
+      </main>
+      <div id = "foot">
+      <footer>
+        <hr>
+        <p>
+        *Summer, 2019 anime
+        </p>
+      </footer>
+      </div>
+    </body>
+  </html>
+  
+  
+
+ 
+  

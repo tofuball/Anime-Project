@@ -1,0 +1,110 @@
+body {
+  /*background: url("https://wallpaperplay.com/walls/full/b/d/b/3069.jpg");*/
+  background: url("https://wallpapercave.com/wp/wp1951668.jpg");
+}
+
+nav{
+  padding: 5px 25px;
+  font-size: 50px;
+  margin: 0;
+  color: #444;
+}
+
+a{
+  color:white;
+  font-family: 'Stylish', sans-serif;
+}
+
+.bord{
+  display:flex;
+  flex-direction: column;
+}
+
+.flex-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 100px 50px;
+  flex-direction: row;
+  
+}
+
+.anime{
+  display:flex;
+  flex-direction: column;
+  font-family: 'Stylish', sans-serif;
+  padding: 10px 10px;
+  font-size: 15px;
+  background-color: rgba(204,153,255,0.8);
+  width: 25vw;
+  align-items: center;
+  color: white;
+  text-align: left;
+  
+}
+
+.anime div{
+  display: flex;
+  justify-content: space-between;
+  width: 20vw;
+}
+
+.des{
+  width: 10vw;
+  height: 10vw;
+  overflow: scroll;
+  border: solid 2px;
+  border-color: rgba(255,0,255,0.2);
+}
+
+.title{
+  font-size:5px;
+  color:white;
+}
+
+.flex{
+  display:flex;
+  align-items:center;
+}
+
+label{
+  color:white;
+  font-size:20px;
+  font-family: 'Stylish', sans-serif;
+}
+
+button{
+  font-family: 'Stylish', sans-serif;
+  font-size:15px;
+}
+
+/* â†“ Home â†“ */
+
+#welcome{
+  font-family: 'Stylish', sans-serif;
+  /*font-family: 'Ubuntu Mono', monospace;*/
+  color:white;
+  text-align: center;
+  border: 10px solid #66c9e2;
+}
+
+#intro{
+  font-family: 'Stylish', sans-serif;
+  /*font-family: 'Ubuntu Mono', monospace;*/
+  color: white;
+  text-align: center;
+  
+}
+
+#foot{
+  font-family:'Stylish', sans-serif;
+  color:white;
+  text-align:left;
+  font-size:10px;
+  
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:60px;
+}
+
